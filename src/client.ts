@@ -43,4 +43,18 @@ export class Client {
 
     return data;
   }
+
+  async getProducts() {
+    const url = "/store/categories/products";
+    const data = await this._GET(url);
+
+    return data;
+  }
+
+  async getProductsByCategory(categoryId: string) {
+    const url = `/store/categories/${categoryId}/products`;
+    const data = await this._GET(url);
+
+    return data;
+  }
 }
